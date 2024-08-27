@@ -148,7 +148,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+        <p>&copy; 2030 Inventory Management System. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
