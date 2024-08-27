@@ -1,0 +1,149 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: #062e48 !important; /* Dark blue color */
+}
+
+.navbar .nav-link {
+    color: #fff !important; /* White text color */
+}
+
+.navbar .nav-link:hover {
+    color: #a8a8a8 !important; /* Slightly lighter color on hover */
+    transition-duration: 0.3s;
+}
+
+.navbar .btn {
+    /* margin-left: 10px; */
+    font-size: 1rem;
+}
+
+.navbar-toggler {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-toggler:hover {
+    background-color: #2470a2 !important; /*background color on hover */
+    transition-duration: 0.3s;
+}
+
+.carousel {
+    height: 500px; /* Set the desired carousel height */
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover; /* Cover the entire carousel area while maintaining aspect ratio */
+    object-position: center; /* Center the image */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.auth-buttons .btn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.header-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #007bff; /* Blue border color */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #007bff; /* Blue color for the header */
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.stats-section {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-card {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+}
+
+.stats-card:hover {
+    transform: scale(1.05);
+}
+
+.stats-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+.stats-card h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.footer {
+    background-color: rgba(41, 128, 185, 1.0)!important; /* Dark blue color, same as header */
+    color: #fff; /* White text color */
+    padding: 1rem 0;
+    text-align: center;
+}
