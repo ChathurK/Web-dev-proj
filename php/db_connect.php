@@ -5,6 +5,7 @@ $username = "root";        // Your MySQL username (default is "root" for XAMPP/W
 $password = "";            // Your MySQL password (leave blank for XAMPP/WAMP)
 $dbname = "ims";          // The name of your database
 $portname = "3306";
+
        // The port number of your database (default is 3306 for XAMPP/WAMP)
 
 // Create a connection
