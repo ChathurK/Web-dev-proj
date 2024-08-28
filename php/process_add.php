@@ -4,18 +4,14 @@ include 'db_connect.php';
 
 // Start the session to use CSRF token
 session_start();
-
-// Generate CSRF token if it doesn't exist
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
+    header('Location: login.php');
+    exit();
 }
+
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate CSRF token
-    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-        die("Invalid CSRF token");
-    }
 
     // Sanitize and validate input data
     $item_name = htmlspecialchars(trim($_POST['item_name']));
