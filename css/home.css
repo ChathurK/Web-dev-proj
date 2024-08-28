@@ -142,7 +142,7 @@ html {
 }
 
 .footer {
-    background-color: rgba(41, 128, 185, 1.0)!important; /* Dark blue color, same as header */
+    background-color: #062e48 !important; /* Dark blue color, same as header */
     color: #fff; /* White text color */
     padding: 1rem 0;
     text-align: center;
