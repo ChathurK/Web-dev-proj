@@ -4,10 +4,6 @@ session_start();
 
 $_SESSION["id"] = "logg";
 
-if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
-    header('Location: login.php');
-    exit();
-}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
