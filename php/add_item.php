@@ -1,12 +1,12 @@
-<?php
-    session_start(); // Start the session
 
-    // Check if the user is logged in
-    if (!isset($_SESSION['user_id'])) {
-        // User is not logged in, redirect to the login page
-        header("Location: login.php");
-        exit();
-    }
+<?php
+session_start();
+
+
+if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
+    header('Location: login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +30,7 @@
 
     <div class="container mt-5">
         <form action="process_add.php" method="post">
-            <input type = "hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'];?>">
-            
+            <div class="form-group">
                 <label for="itemName">Item Name</label>
                 <input type="text" class="form-control" id="itemName" name="item_name" required>
             </div>
