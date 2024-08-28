@@ -30,7 +30,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <header class="bg-primary text-white py-3 d-flex justify-content-between align-items-center">
+    <header class="bg-primary text-white py-3 d-flex justify-content-between align-items-center headermy">
         <!-- Hamburger Menu for Mobile -->
         <button id="sidebarToggle" class="btn btn-outline-light d-md-none"><i class="fas fa-bars"></i></button>
 
@@ -92,22 +92,22 @@ $result = $conn->query($sql);
         <div class="content container-fluid">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="category-card bg-primary text-white text-center" onclick="window.location.href='category_inventory.php?category=laptop'">
+                    <div class="category-card bg-primary text-white text-center laptop-card" onclick="window.location.href='category_inventory.php?category=laptop'">
                         <h2>Laptops</h2>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="category-card bg-primary text-white text-center" onclick="window.location.href='category_inventory.php?category=mobile'">
+                    <div class="category-card bg-primary text-white text-center mobile-card" onclick="window.location.href='category_inventory.php?category=mobile'">
                         <h2>Mobiles</h2>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="category-card bg-primary text-white text-center" onclick="window.location.href='category_inventory.php?category=pc'">
+                    <div class="category-card bg-primary text-white text-center pc-card" onclick="window.location.href='category_inventory.php?category=pc'">
                         <h2>PCs</h2>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="category-card bg-primary text-white text-center" onclick="window.location.href='category_inventory.php?category=printer'">
+                    <div class="category-card bg-primary text-white text-center printer-card" onclick="window.location.href='category_inventory.php?category=printer'">
                         <h2>Printers</h2>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ $result = $conn->query($sql);
 
                 <!-- Button to View Full Inventory -->
                 <div class="text-right mt-4">
-                    <a href="inventory.php" class="btn btn-primary btn-lg"><i class="fas fa-list"></i> View Full Inventory</a>
+                    <a href="inventory.php" class="btn btn-primary btn-lg full-inventory-button"><i class="fas fa-list"></i> View Full Inventory</a>
                 </div>
 
             </div>
