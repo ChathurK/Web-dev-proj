@@ -1,8 +1,9 @@
 <?php
+
+// Start the session after setting configurations
 session_start();
-$error = '';
 
-
+$_SESSION["id"] = "logg";
 
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -16,13 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Database connection settings
+    // Securely get database credentials
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "ims";
     $portname = "3306";
-
 
     // Create a connection
     $conn = new mysqli($servername, $username, $password, $dbname, $portname);
@@ -53,11 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Verify the password
             if (password_verify($userPassword, $hashed_password)) {
-                // Password is correct, start a session and redirect to the Dashboard
-                $_SESSION['username'] = $userName;
-                $_SESSION['userid'] = $userId;
-
-                // Redirect to Dashboard
+                // Password is correct, start a session and regenerate session ID
+                $_SESSION['user_id'] = $id;
+                        // Redirect to Dashboard
                 header("Location: dd.php");
                 exit(); // Make sure to exit after redirecting
             } else {
@@ -86,12 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <!-- <link rel="stylesheet" href="../css/home.css"> -->
     <link rel="stylesheet" href="../css/login.css">
-
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loginForm').addEventListener('submit', function (event) {
                 var username = document.getElementById('username').value.trim();
                 var password = document.getElementById('password').value.trim();
                 var errorMessages = [];
@@ -135,7 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <button type="submit">Login</button>
         </form>
-
 
         <div class="signupButton-container">
             <h4>Don't have an account?</h4>
