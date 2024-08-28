@@ -1,18 +1,17 @@
 <!-- dashboard.php -->
 <?php
-// Include the database connection
 session_start();
-
 if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
-    // Redirect to login page if session is not valid
     header('Location: login.php');
     exit();
 }
 
+// Include the database connection
 include 'db_connect.php';
 // Query to get the latest inventories
 $sql = "SELECT id, name, category, quantity, price, added_date FROM item ORDER BY added_date DESC";
 $result = $conn->query($sql);
+
 
 ?>
 

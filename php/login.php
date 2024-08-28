@@ -1,12 +1,12 @@
 <?php
 
-// Start the session after setting configurations
 session_start();
 
 $_SESSION["id"] = "logg";
 
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
+    header('Location: login.php');
+    exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
