@@ -8,6 +8,10 @@
 //     header("Location: login.php");
 //     exit();
 // }
+
+
+    // Administrative functionalities
+
 // Start the session
 // session_start();
 
@@ -36,11 +40,12 @@
 //                             $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
 
 // Include the database connection
-include 'db_connect.php';
 
+include 'db_connect.php';
 // Query to get the latest inventories
 $sql = "SELECT id, name, category, quantity, price, added_date FROM item ORDER BY added_date DESC";
 $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -227,3 +232,4 @@ $result = $conn->query($sql);
 </body>
 
 </html>
+
