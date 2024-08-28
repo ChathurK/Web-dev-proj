@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: #004080 !important;
+  background-color: #062e48 !important;
   color: white;
   padding: 10px 20px;
   width: 100%;
@@ -24,6 +24,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.headermy {
+  background-color: #062e48 !important;
 }
 
 /* Ensure the logout button height matches the search bar */
@@ -74,7 +78,7 @@ header .btn i {
 
 .sidebar {
   width: 250px;
-  background-color: #007bff !important;
+  background-color: #062e48 !important;
   height: -webkit-fill-available;
   padding-top: 20px;
   position: fixed;
@@ -137,11 +141,31 @@ header .btn i {
   align-items: center;
 }
 
+.laptop-card {
+  background-color: rgb(26, 129, 198) !important;
+}
+
+.mobile-card {
+  background-color: rgba(41, 128, 185,1.0) !important;
+}
+
+.pc-card {
+  background-color: rgb(42, 114, 161) !important;
+}
+
+.printer-card {
+  background-color: rgb(33, 83, 116) !important;
+}
+
 .category-card:hover {
   transform: scale(1.05);
   border: solid 1px #004080 !important;
   color: #004080 !important;
   background-color: white !important;
+}
+
+.full-inventory-button {
+  background-color: #062e48 !important;
 }
 
 @media (max-width: 768px) {
