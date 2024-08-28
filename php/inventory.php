@@ -78,7 +78,7 @@ $conn->close();
                             <td><?php echo htmlspecialchars($row['price']); ?></td>
                             <td><?php echo htmlspecialchars($row['category']); ?></td>
                             <td>
-                                <a href="update_item.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="update_item.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm" style = "background-color: rgba(41, 128, 185,1.0) !important; color: white; border-color: rgba(41, 128, 185,1.0)">Edit</a>
                                 <button class="btn btn-danger btn-sm" onclick="confirmDelete(<?php echo $row['id']; ?>)">Delete</button>
                             </td>
                         </tr>
