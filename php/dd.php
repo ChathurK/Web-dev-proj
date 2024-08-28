@@ -44,7 +44,7 @@ $result = $conn->query($sql);
                 <i class="fas fa-search position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%); color: #004080;"></i>
             </div>
             <a href="../index.php" class="btn btn-outline-light d-flex align-items-center">
-                <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                <i class="fas fa-sign-out-alt mr-2" ></i> Logout
             </a>
         </div>
 
@@ -201,3 +201,5 @@ $result = $conn->query($sql);
 </body>
 
 </html>
+
+

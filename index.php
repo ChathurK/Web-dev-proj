@@ -2,6 +2,9 @@
 
 session_start();
 
+$_SESSION["id"] = "newSession";
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
