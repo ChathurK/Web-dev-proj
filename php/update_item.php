@@ -43,7 +43,7 @@ $conn->close();
 </head>
 
 <body>
-    <header class="bg-primary text-white py-3">
+    <header class="bg-primary text-white py-3" style = "background-color: #062e48 !important">
         <div class="container d-flex align-items-center">
             <a href="dd.php" class="btn btn-light">Dashboard</a>
             <h1 class="m-0 flex-grow-1 text-center">Update Item</h1>
