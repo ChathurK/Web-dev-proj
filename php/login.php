@@ -4,13 +4,6 @@ session_start();
 
 $_SESSION["id"] = "logg";
 
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-        die("Invalid CSRF token");
-    }
-}
-
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Securely get database credentials
@@ -116,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
 
         <form id="loginForm" action="login.php" method="POST">
-            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+            <input type="hidden" name="csrf_token" value="">
             <div class="input-group">
                 <input type="text" id="username" placeholder="Username" name="username" required>
             </div>
