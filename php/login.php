@@ -144,4 +144,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php
  session_destroy();
- ?>
+?>
