@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e5985;
+    background-image: url('../img/bgnew.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.signup-box h2 {
+    color: #000000; /* White text */
+    font-size: 30px; /* Larger font size */
+    font-weight: bold;
+    text-align: center;
+    margin-top: unset;
+}
+
+.signup-box {
+    background-color: #ffffffea; /* White background */
+    padding: 30px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    width: 400px; /* Fixed width */
+    max-width: 100%; /* Responsive max width */
+    text-align: center;
+}
+
+.signup-box btn {
+    background-color: #1B1464;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox label {
+    color: #333;
+}
+
+.login-link {
+    color: #171717;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signupButton-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signupButton-container h4 {
+    margin-bottom: 10px;
+    color: #333; /* Dark gray text */
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#signupButton {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#signupButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+.textbox {
+    margin-bottom: 20px; /* Reduced bottom margin for better spacing */
+}
+
+.textbox input {
+    width: 100%;
+    padding: 15px; /* Increased padding for a more comfortable input */
+    background: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Lighter border color for a cleaner look */
+    border-radius: 6px; /* Slightly larger border radius */
+    margin-top: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.textbox input:focus {
+    border-color: #1B1464; /* Color change on focus */
+    box-shadow: 0 0 8px rgba(27, 20, 100, 0.5); /* Glow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.checkbox {
+    margin-bottom: 20px; /* Reduced bottom margin for better spacing */
+    text-align: left;
+    color: #fff; /* Match checkbox text color to page theme */
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #48a5f6; /* Consistent with theme color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #327ab7; /* Darker shade on hover */
+    transform: scale(1.02); /* Slight scale effect for interactivity */
+}

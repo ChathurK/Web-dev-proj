@@ -1,46 +1,20 @@
 <!-- dashboard.php -->
 <?php
-// session_start(); // Start the session
-
-// // Check if the user is logged in
-// if (!isset($_SESSION['userID'])) {
-//     // User is not logged in, redirect to the login page
-//     header("Location: login.php");
-//     exit();
-// }
-// Start the session
 session_start();
 
-                            // Check if the user is logged in by verifying the existence of 'user_id' in the session
-                            if (!isset($_SESSION['user_id'])) {
-                                // If not logged in, redirect them to the login page
-                                header('Location: login.php'); // Adjusted to match your directory structure
-                                exit();
-                            }
 
-                            // Optional: Implement a session timeout or regenerate session ID to enhance security
-                            // For example, regenerate session ID to prevent session fixation
-                            if (!isset($_SESSION['initiated'])) {
-                                session_regenerate_id(true);
-                                $_SESSION['initiated'] = true;
-                            }
-
-                            // Optionally, implement session timeout
-                            $timeout_duration = 1800; // 30 minutes
-                            if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
-                                session_unset();     // Unset $_SESSION variable for the run-time 
-                                session_destroy();   // Destroy the session data in storage
-                                header('Location: login.php');
-                                exit();
-                            }
-                            $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
+if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
+    header('Location: login.php');
+    exit();
+}
 
 // Include the database connection
 include 'db_connect.php';
-
 // Query to get the latest inventories
 $sql = "SELECT id, name, category, quantity, price, added_date FROM item ORDER BY added_date DESC";
 $result = $conn->query($sql);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -227,3 +201,4 @@ $result = $conn->query($sql);
 </body>
 
 </html>
+
