@@ -4,6 +4,7 @@ session_start();
 
 $_SESSION["id"] = "logg";
 
+
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Securely get database credentials
@@ -25,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userName = htmlspecialchars(trim($_POST['username']));
     $userPassword = htmlspecialchars(trim($_POST['password']));
 
+
     // Server-side validation
     if (empty($userName) || empty($userPassword)) {
         $error = "Username and password are required.";
@@ -34,6 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("s", $userName);
         $stmt->execute();
         $stmt->store_result();
+
+        
 
         // Check if a user with the entered username exists
         if ($stmt->num_rows > 0) {
@@ -60,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Close the connection
     $conn->close();
+    
 }
 ?>
 
@@ -136,3 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </body>
 
 </html>
+
+<?php
+ session_destroy();
+ ?>
