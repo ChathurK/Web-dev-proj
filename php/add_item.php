@@ -41,7 +41,15 @@ if (!isset($_SESSION["id"]) || $_SESSION["id"] !== "logg") {
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" class="form-control" id="price" name="price" required>
+                <input type="number" inputmode="decimal" class="form-control" id="price" name="price" required>
+
+                <style>
+                    input[type=number]::-webkit-outer-spin-button,
+                    input[type=number]::-webkit-inner-spin-button {
+                          -webkit-appearance: none;
+                             margin: 0;
+                    }
+                </style>
             </div>
             <div class="form-group">
                 <label for="category">Category</label>
