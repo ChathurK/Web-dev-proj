@@ -30,7 +30,7 @@
 
     <div class="container mt-5">
         <form action="process_add.php" method="post">
-            <input type = "hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'];?>">
+            <input type = "hidden" name="csrf_token">
             
                 <label for="itemName">Item Name</label>
                 <input type="text" class="form-control" id="itemName" name="item_name" required>
