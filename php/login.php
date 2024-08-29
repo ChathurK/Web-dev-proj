@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="signupButton-container">
             <h4>Don't have an account?</h4>
-            <a href="../php/signup.php">
+            <a href="signup.php">
                 <button type="button" id="signupButton">Sign up</button>
             </a>
         </div>
