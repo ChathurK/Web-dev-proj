@@ -1,8 +1,8 @@
 <?php
 // Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "inventsys-svr.mysql.database.azure.com";
+$username = "qcsvrzgcic";
+$password = "r00t@azure";
 $dbname = "ims";
 $portname = "3306";
 

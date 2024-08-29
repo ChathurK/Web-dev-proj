@@ -8,9 +8,9 @@ $_SESSION["id"] = "logg";
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Securely get database credentials
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $servername = "inventsys-svr.mysql.database.azure.com";
+    $username = "qcsvrzgcic";
+    $password = "r00t@azure";
     $dbname = "ims";
     $portname = "3306";
 
